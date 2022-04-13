@@ -1,0 +1,19 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "The code for the third Homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastiangi312/Cypress.git"
+  },
+  "author": "sebastian giraldo Segiraldovi@gmail.com /sebastiangi312",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastiangi312/Cypress/issues"
+  },
+  "homepage": "https://github.com/sebastiangi312/Cypress#readme"
+}
