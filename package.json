@@ -4,7 +4,7 @@
   "description": "The code for the third Homework",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sebastiangi312/Cypress/issues"
   },
-  "homepage": "https://github.com/sebastiangi312/Cypress#readme"
+  "homepage": "https://github.com/sebastiangi312/Cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.5.4"
+  }
 }
