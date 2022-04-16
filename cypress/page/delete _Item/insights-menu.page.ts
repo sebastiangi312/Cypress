@@ -1,0 +1,14 @@
+class InsightMenu {
+
+    private ticketsCount: string
+
+    constructor() {
+        this.ticketsCount = '.insights-grid > .insights-value:nth-child(8)'
+    }
+
+    public checkTicketsCount(): void {
+        cy.get(this.ticketsCount).should("have.text", " 1 ")
+    }
+
+}
+export { InsightMenu }
