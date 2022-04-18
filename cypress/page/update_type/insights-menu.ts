@@ -7,7 +7,7 @@ class InsightMenu {
     }
 
     public checkTicketsCount(): void {
-        cy.get(this.ticketsCount).should("have.text", " 4 ")
+        cy.get(this.ticketsCount).should("have.text", " 1 ")
     }
 
 }
