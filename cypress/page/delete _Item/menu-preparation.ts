@@ -4,13 +4,18 @@ class MenuPreparation {
 
     private apiURL;
 
+    private oldData: any[];
     constructor() {
         this.apiURL = "http://localhost:8080/api/items"
+        this.oldData = []
     }
 
     prepareTest() {
         cy.request('GET', this.apiURL).then(resp => {
-            resp.body.forEach((item: Item) => cy.request('DELETE', this.apiURL + "/" + item.id));
+            resp.body.forEach((item: Item) => {
+                cy.request('DELETE', this.apiURL + "/" + item.id)
+                this.oldData.push(item);
+            });
             let newItems = [
                 {
                     name: 'Caza de Combate 1',
@@ -25,7 +30,17 @@ class MenuPreparation {
                     type: Types.NORMAL
                 }
             ]
-            cy.request('POST', this.apiURL+"/create", newItems)
+            cy.request('POST', this.apiURL + "/create", newItems)
+        })
+    }
+
+
+    restoreOldData(){
+        cy.request('GET', this.apiURL).then(resp => {
+            resp.body.forEach((item: Item) => {
+                cy.request('DELETE', this.apiURL + "/" + item.id)
+            });
+            cy.request('POST', this.apiURL + "/create", this.oldData)
         })
     }
 }

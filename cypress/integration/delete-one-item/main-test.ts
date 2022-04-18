@@ -6,11 +6,14 @@ const menuContentPage = new MenuContentPage()
 const insights = new InsightMenu()
 const menuPreparation = new MenuPreparation()
 
+beforeEach(() => {
+    menuPreparation.prepareTest()
+  })
+
 describe("Deleting one item", () => {
 
     it("then the item is deleted Insights is updated too", () => {
 
-        menuPreparation.prepareTest()
         menuContentPage.visitMenuContentPage()
         menuContentPage.goToDeleteItemMenu()
 
@@ -23,3 +26,7 @@ describe("Deleting one item", () => {
 
     });
   });
+
+  afterEach(() => {
+      menuPreparation.restoreOldData()
+  })
