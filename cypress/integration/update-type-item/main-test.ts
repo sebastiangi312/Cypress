@@ -6,12 +6,13 @@ const insightsMenu = new InsightMenu()
 const menuContentPage = new MenuContentPage()
 const menuPreparation = new MenuPreparation()
 
-beforeEach(() => {
-  menuPreparation.prepareTest()
-})
 
 describe("Updating type of item", () => {
-
+  
+  before(() => {
+    menuPreparation.prepareTest()
+  })
+  
     it("then the type is updated in list view and Insights is updated too", () => {
 
       menuContentPage.visitMenuContentPage();
@@ -26,8 +27,10 @@ describe("Updating type of item", () => {
 
       insightsMenu.checkTicketsCount();
     });
-  });
 
-  afterEach(() => {
+    after(() => {
       menuPreparation.restoreOldData()
   })
+  });
+
+ 
