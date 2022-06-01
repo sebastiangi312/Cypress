@@ -15,7 +15,6 @@ pipeline{
                     npm install cypress-multi-reporters --save-dev
                     npm install mochawesome-merge --save-dev
                     npm install mochawesome-report-generator --save-dev
-                    npm install -g wait-on
                 '''
             }
         }
