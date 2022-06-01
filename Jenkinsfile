@@ -12,5 +12,12 @@ pipeline{
                 sh 'npm install'
             }
         }
+
+        stage("Run tests"){
+            steps{
+                sh 'npm run test:open'
+            }
+        }
+
     }
 }
