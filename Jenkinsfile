@@ -21,7 +21,7 @@ pipeline{
 
         stage("Run tests"){
             steps{
-                sh "npm test"
+                sh "npm test & wait-on 44.205.178.209:4200"
             }
         }
 
