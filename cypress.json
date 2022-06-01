@@ -1,5 +1,5 @@
 {
-    "baseUrl":"http://44.205.178.209:4200",
+    "baseUrl":"http://localhost:4200",
     "video": false,
     "screenshotOnRunFailure": false,
     "defaultCommandTimeout": 25000,
