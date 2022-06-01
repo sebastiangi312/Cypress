@@ -25,5 +25,17 @@ pipeline{
             }
         }
 
+        stage("Report in html") {
+            steps {
+                publishHTML([
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: 'cypress/reports',
+                        reportFiles: 'report.html',
+                        reportName: 'User Interface tests results',
+                        reportTitles: ''])
+            }
+    }
     }
 }
