@@ -7,7 +7,7 @@
     "test:open": "npm run lint && cypress open",
     "lint": "eslint ./cypress/integration/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
-    "pretest": "npm run clean:reports && wait-on http://localhost:4200",
+    "pretest": "npm run clean:reports",
     "test": "cypress run",
     "posttest": "npm run combine-reports && npm run generate-report",
     "clean:reports": "rm -r -f cypress/reports",
