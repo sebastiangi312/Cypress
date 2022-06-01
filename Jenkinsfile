@@ -15,7 +15,7 @@ pipeline{
 
         stage("Run tests"){
             steps{
-                sh 'npm run test:open'
+                sh 'CYPRES_BASE_URL npm run test:open'
             }
         }
 
