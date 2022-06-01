@@ -10,7 +10,6 @@ describe("Add a full item", () => {
   before(() => {
     add_item = new addItems();
     add_item.visitItemsPage();
-    cy.wait(2000)
   });
 
   it("The user has clicked on ADD (+) button", () => {
@@ -30,7 +29,6 @@ describe("Add a full item", () => {
 
   it("The user clicks on ADD button", () => {
     add_item.clickOnAddItem();
-    cy.wait(2000)
   });
 
   it("The information set is displayed according to added in creation step.", () => {
@@ -45,7 +43,6 @@ describe("Add a full item", () => {
           .click(); 
         cy.get(".delete-dialog-actions > button:nth-child(1)").click();
       });
-      cy.wait(2000)
   });
 
   });
