@@ -25,7 +25,7 @@ pipeline{
             }
         }
 
-        stage("Report in html") {
+        stage("Report results in html") {
             steps {
                 publishHTML([
                         allowMissing: false,
