@@ -6,7 +6,7 @@ class MenuPreparation {
 
     private oldData: any[];
     constructor() {
-        this.apiURL = "http://localhost:8080/api/items"
+        this.apiURL = "http://localhost:8081/api/items"
         this.oldData = []
     }
 
