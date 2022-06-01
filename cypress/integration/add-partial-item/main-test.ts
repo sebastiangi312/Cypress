@@ -37,18 +37,3 @@ describe("Add a full item", () => {
   });
 });
 
-/*describe("Add an item with missing information", () => {
-
-    it("then the t-shirt should be bought", () => {
-      cy.visit("http://localhost:4200/list");
-      cy.get("div:nth-child(1) > div > button:nth-child(1)").click();
-      cy.get("#mat-input-0").type("Chocorramo");
-      cy.get("#mat-input-2").type("-10");
-      cy.focused().blur();
-      cy.get("[data-automation=\"item-form-confirm-button\"]")
-      .should("be.disabled");
-      cy.get("#mat-error-0")
-      .should("have.text", " Expected value between 0 and 80 ");
-
-    });
-  });*/

@@ -47,15 +47,4 @@ describe("Add a full item", () => {
 
   });
 
-  /*it("then the t-shirt should be bought", () => {
-      cy.visit("http://localhost:4200/list");
-      cy.get("div:nth-child(1) > div > button:nth-child(1)").click();
-      cy.get("#mat-input-0").type("Miel");
-      cy.get("#mat-input-1").type("20");
-      cy.get("#mat-input-2").type("50");
-      cy.get("#mat-select-value-1").click();
-      cy.get("#mat-option-1").click();
-      cy.get("[data-automation=\"item-form-confirm-button\"]").click();
-      cy.get(".list-container > div:nth-child(3) div.list-col:first-child")
-      .should("have.text", "Miel");   
-    });*/
+  
